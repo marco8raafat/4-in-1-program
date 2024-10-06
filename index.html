@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 in 1 program</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <header>
+        <h1>4 in 1 program</h1>
+    </header>
+    <main>
+        <section id="main-menu" class="menu active">
+            <h2>Main Menu</h2>
+            <ul>
+                <li><button onclick="showSection('split-program')">Split Program</button></li>
+                <li><button onclick="showSection('binary-numbers')">One Binary Number / Printing Many Numbers</button></li>
+                <li><button onclick="showSection('teddy-bear-picnic')">Teddy Bear Picnic</button></li>
+                <li><button onclick="showSection('phishing-scanner')">Phishing Scanner</button></li>
+                <li><button onclick="showSection('main-menu')">Exit</button></li>
+            </ul>
+        </section>
+
+        <section id="split-program" class="program-section">
+            <h2>Split Program</h2>
+            <form id="split-form">
+                <label for="target">Target:</label>
+                <input type="text" id="target" name="target" required><br><br>
+                <label for="delimiter">Delimiter:</label>
+                <input type="text" id="delimiter" name="delimiter" required><br><br>
+                <button type="submit">Split!</button>
+            </form>
+            <div id="split-result" class="output"></div>
+            <button onclick="showSection('main-menu')">Back to Menu</button>
+        </section>
+
+        <section id="binary-numbers" class="program-section">
+            <h2>One Binary Number / Printing Many Numbers</h2>
+            <form id="binary-form">
+                <label for="binary-choice">Choose an option:</label>
+                <select id="binary-choice" name="binary-choice">
+                    <option value="1">One Binary Number</option>
+                    <option value="2">Printing Many Numbers</option>
+                </select><br><br>
+                <label for="binary-input">Enter a number:</label>
+                <input type="number" id="binary-input" name="binary-input" min="0" required><br><br>
+                <button type="submit">Go!</button>
+            </form>
+            <div id="binary-result" class="output"></div>
+            <button onclick="showSection('main-menu')">Back to Menu</button>
+        </section>
+
+        <section id="teddy-bear-picnic" class="program-section">
+            <h2>Teddy Bear Picnic</h2>
+            <form id="teddy-form">
+                <label for="bear-input">Enter a number:</label>
+                <input type="number" id="bear-input" name="bear-input" min="0" required><br><br>
+                <button type="submit">Check!</button>
+            </form>
+            <div id="bear-result" class="output"></div>
+            <button onclick="showSection('main-menu')">Back to Menu</button>
+        </section>
+
+        <section id="phishing-scanner" class="program-section">
+            <h2>Phishing Scanner</h2>
+            <form id="phishing-form">
+                <label for="file-input">Upload a file:</label>
+                <input type="file" id="file-input" name="file-input" accept=".txt"><br><br>
+                <button type="submit">Scan!</button>
+            </form>
+            <div id="phishing-result" class="output"></div>
+            <button onclick="showSection('main-menu')">Back to Menu</button>
+        </section>
+    </main>
+    <footer class="copyright">
+        &copy; 2024 Marco Raafat. All rights reserved.
+    </footer>
+    <script src="logic.js"></script>
+</body>
+</html>
